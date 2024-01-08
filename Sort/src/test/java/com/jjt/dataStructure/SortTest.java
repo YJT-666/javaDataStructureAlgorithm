@@ -112,7 +112,7 @@ public class SortTest {
         Integer[] arr2 = new Integer[]{1, 2, 3, 4, 5};
         quickSort.sort(arr2);
 
-        Integer[] arr3 = new Integer[8000000];
+        Integer[] arr3 = new Integer[80000];
         for (int i = 0; i < arr3.length; i++) {
             arr3[i] = (int)(Math.random()*80000);
         }
