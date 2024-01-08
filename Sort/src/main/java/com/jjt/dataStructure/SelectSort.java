@@ -74,7 +74,7 @@ class SelectSortProxy extends SelectSort {
             System.out.println(Arrays.toString(arr));
         }
 
-        System.out.println("本次排序总共花费 " + interval+ "s");
+        System.out.println("共"+arr.length+"个元素"+ ",本次排序总共花费 " + interval+ "s");
         System.out.println("-----------------------------------");
     }
 }
