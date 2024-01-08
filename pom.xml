@@ -10,7 +10,12 @@
     <modules>
         <module>sparseArray</module>
         <module>queue</module>
-        <module>myLinkedList</module>
+        <module>LinkedList</module>
+        <module>Josephu</module>
+        <module>Stack</module>
+        <module>Calculator</module>
+        <module>Recursion</module>
+        <module>Sort</module>
     </modules>
     <packaging>pom</packaging>
 
