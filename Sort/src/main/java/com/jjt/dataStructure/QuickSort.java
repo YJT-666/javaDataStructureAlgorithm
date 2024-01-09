@@ -42,9 +42,6 @@ public class QuickSort {
      *      - - -   - +  pivot +
      *                l      r
      *      - - -   - pivot  + +
-     *
-     *
-     *
      * */
     public void quickSort(Integer[] arr, int left, int right) {
         int l = left;

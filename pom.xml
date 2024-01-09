@@ -16,6 +16,9 @@
         <module>Calculator</module>
         <module>Recursion</module>
         <module>Sort</module>
+        <module>Search</module>
+        <module>HashTabDemo</module>
+        <module>BinaryTreeDemo</module>
     </modules>
     <packaging>pom</packaging>
 

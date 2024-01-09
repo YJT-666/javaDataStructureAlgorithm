@@ -76,7 +76,6 @@ public class ShellSort {
 
 
 class ShellSortProxy extends ShellSort {
-
     /**
      *  对 sort 方法进行代理
      *  统计排序花费的时间，并且当数组大小小于10，打印排序前后的数组
