@@ -1,8 +1,8 @@
-package com.jjt.dataStructure;
+package com.jjt.dataStructure.threadedBinaryTree;
 
 /**
  * ClassName: HeroNode
- * Package: com.jjt.dataStructure.threadedBinaryTree
+ * Package: com.jjt.dataStructure
  *
  * @Author jjt
  * @Create 2024/1/9 19:21
@@ -16,6 +16,25 @@ public class HeroNode {
     private HeroNode left;
     private HeroNode right;
 
+    private int leftType;  //  leftType=0，表示left指向左子树；leftType=1，表示left指向前驱节点
+    private int rightType; //  rightType=0，表示right指向右子树；rightType=1，表示right指向后继节点
+
+    public int getLeftType() {
+        return leftType;
+    }
+
+    public void setLeftType(int leftType) {
+        this.leftType = leftType;
+    }
+
+    public int getRightType() {
+        return rightType;
+    }
+
+    public void setRightType(int rightType) {
+        this.rightType = rightType;
+    }
+
     public HeroNode(int no, String name) {
         this.no = no;
         this.name = name;
@@ -24,35 +43,27 @@ public class HeroNode {
     public int getNo() {
         return no;
     }
-
     public void setNo(int no) {
         this.no = no;
     }
-
     public String getName() {
         return name;
     }
-
     public void setName(String name) {
         this.name = name;
     }
-
     public HeroNode getLeft() {
         return left;
     }
-
     public void setLeft(HeroNode left) {
         this.left = left;
     }
-
     public HeroNode getRight() {
         return right;
     }
-
     public void setRight(HeroNode right) {
         this.right = right;
     }
-
     @Override
     public String toString() {
         return "HeroNode{" +
@@ -60,7 +71,6 @@ public class HeroNode {
                 ", name='" + name + '\'' +
                 '}';
     }
-
     /**
      *  前序遍历
      *  TODO:
@@ -80,7 +90,6 @@ public class HeroNode {
             this.right.preOrder();
         }
     }
-
     /**
      *  中序遍历
      *  TODO:
@@ -119,7 +128,6 @@ public class HeroNode {
         // 3.输出当前节点
         System.out.println(this);
     }
-
     /**
      *   前序遍历查找
      *   根据 英雄的 no 查找英雄
@@ -140,7 +148,6 @@ public class HeroNode {
         }
         return null;
     }
-
     /**
      *   中序遍历查找
      *   根据 英雄的 no 查找英雄
@@ -160,19 +167,17 @@ public class HeroNode {
         }
         return null;
     }
-
     /**
-     * 后序遍历查找
-     * 根据 英雄的 no 查找英雄
-     * 找到返回 英雄节点   没有找到返回 null
-     */
+     *   后序遍历查找
+     *   根据 英雄的 no 查找英雄
+     *   找到返回 英雄节点   没有找到返回 null
+     * */
     public HeroNode postOrderSearch(int no) {
         HeroNode res = null;
         if(this.left != null) {
             res = this.left.postOrderSearch(no);
             if(res !=null ) return res;
         }
-
         if(this.right != null) {
             return this.right.postOrderSearch(no);
         }
@@ -190,7 +195,6 @@ public class HeroNode {
      *  TODO:
      *    二叉树是单向的，所以需要判断要删除的节点是否是当前节点的子节点
      * */
-
     public void remove(int no) {
         if(this.left != null) {
             if (this.left.getNo() == no) {
@@ -199,7 +203,6 @@ public class HeroNode {
             }
             this.left.remove(no);
         }
-
         if(this.right != null) {
             if(this.right.getNo() == no) {
                 this.setRight(null);
@@ -208,5 +211,4 @@ public class HeroNode {
             this.right.remove(no);
         }
     }
-
 }

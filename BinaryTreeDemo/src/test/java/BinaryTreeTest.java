@@ -1,3 +1,4 @@
+import com.jjt.dataStructure.ArrayBinaryTree;
 import com.jjt.dataStructure.BinaryTree;
 import com.jjt.dataStructure.HeroNode;
 import org.junit.jupiter.api.Test;
@@ -68,5 +69,15 @@ public class BinaryTreeTest {
         binaryTree.preOrder();
         System.out.println("----------------------------------");
 
+    }
+
+    @Test
+    public void test02() {
+        ArrayBinaryTree arrayBinaryTree = new ArrayBinaryTree();
+
+        Integer[] arr = new Integer[]{1, 2, 3, 4, 5, 6, 7};
+        arrayBinaryTree.setArr(arr);
+        arrayBinaryTree.preOrder();  // 1,2,4,5,3,6,7
+        System.out.println("----------------------------------");
     }
 }
