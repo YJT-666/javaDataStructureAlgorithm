@@ -19,6 +19,8 @@
         <module>Search</module>
         <module>HashTabDemo</module>
         <module>BinaryTreeDemo</module>
+        <module>huffmanTree</module>
+        <module>huffmanCodeDemo</module>
     </modules>
     <packaging>pom</packaging>
 
