@@ -21,6 +21,8 @@
         <module>BinaryTreeDemo</module>
         <module>huffmanTree</module>
         <module>huffmanCodeDemo</module>
+        <module>BinarySearchTree</module>
+        <module>AVLTree</module>
     </modules>
     <packaging>pom</packaging>
 
