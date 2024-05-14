@@ -23,6 +23,7 @@
         <module>huffmanCodeDemo</module>
         <module>BinarySearchTree</module>
         <module>AVLTree</module>
+        <module>heap</module>
     </modules>
     <packaging>pom</packaging>
 
